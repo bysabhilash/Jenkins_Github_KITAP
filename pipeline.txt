@@ -6,21 +6,21 @@ stages('Build')
 {
 steps{
 echo "Building test case....."
-bat "mven clean"
+bat "mvn clean"
 }
 }
 stages('Test')
 {
 steps{
 echo "Testing the code....."
-bat "mven test"
+bat "mvn test"
 }
 }
 stages('Compile')
 {
 steps{
 echo "Compiling the project....."
-bat "mven clean"
+bat "mvn compile"
 }
 }
 stages('Deploy')
