@@ -18,9 +18,10 @@ public class CaseserviceapprovalCreation extends BaseTest {
 
             throw new SkipException("Skipping the test " + "CaseserviceapprovalCreation".toUpperCase() + "as the Run mode is NO");
         }
+        ExtentManager.createTest("CaseserviceapprovalCreation","SalesforceDaikinDemo").assignAuthor("KT1461").assignCategory("Smoke").assignDevice("Chrome");
         ExtentManager.log("Starting CaseserviceapprovalCreation ...");
         lightningloginpage.openHomepage(SFBaseURL);
-        lightningloginpage.login(data.get("username"), data.get("password"));
+        lightningloginpage.login(SFUserId, SFPassword);
         casesserviceapproval.clickchildcase(SFPageBase.cases);
         casesserviceapproval.clickcaseservice("Case Service Codes");
         casesserviceapproval.clicknew("New");
@@ -32,14 +33,15 @@ public class CaseserviceapprovalCreation extends BaseTest {
         casesserviceapproval.clicksave();       
         casesserviceapproval.clickcasenumber(SFPageBase.cases);        
         casesserviceapproval.clickparentnumber("Parent Case");
-        casesserviceapproval.clickbutton();
+        //casesserviceapproval.clickbutton();
         casesserviceapproval.clicksubmitapprovalbutton();
         casesserviceapproval.comments("Comments", "submitting for approval");
         casesserviceapproval.submit("Submit");
-        casesserviceapproval.scrolling();
+      //  casesserviceapproval.scrolling();
         casesserviceapproval.clickapprovalhistory("Approval History");
         casesserviceapproval.clickapprover("Eithne Shimasaki");        
-        casesserviceapproval.clickuserdetail("User Detail");       
+        casesserviceapproval.clickuserdetail("User Detail");   
+        Thread.sleep(5000);
         casesserviceapproval.clicklogin();
         Thread.sleep(15000);
         casesserviceapproval.clicknotification("Notifications");

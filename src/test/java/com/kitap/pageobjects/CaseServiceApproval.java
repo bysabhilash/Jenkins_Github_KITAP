@@ -28,7 +28,7 @@ public class CaseServiceApproval extends SFPageBase {
 	@FindBy(xpath="//div[@class='oneWorkspaceTabWrapper']//div//following::iframe")
 	private WebElement frame2;
 	
-	@FindBy(xpath="//span[normalize-space()='Submit for Approval']")
+	@FindBy(xpath="//button[normalize-space()='Submit for Approval']")
 	private WebElement button;
 	
 	@FindBy(xpath="//*[@id=\"topButtonRow\"]/input[4]")

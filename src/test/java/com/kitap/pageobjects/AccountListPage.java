@@ -167,7 +167,7 @@ public class AccountListPage extends SFPageBase {
 	public void setRating(String label,String data) throws Exception {
 
 		try{
-			selectOption(label,data);
+			selectoption(label,data);
 			
 		}
 		catch (Exception e)
@@ -281,7 +281,7 @@ public class AccountListPage extends SFPageBase {
 	public void setType(String label,String data) throws Exception {
 
 		try{
-			selectOption(label,data);
+			selectoption(label,data);
 			
 		}
 		catch (Exception e)
@@ -300,7 +300,7 @@ public class AccountListPage extends SFPageBase {
 	public void setOwnership(String label,String data) throws Exception {
 
 		try{
-			selectOption(label,data);
+			selectoption(label,data);
 			
 		}
 		catch (Exception e)
@@ -319,7 +319,7 @@ public class AccountListPage extends SFPageBase {
 	public void setIndustry(String label,String data) throws Exception {
 
 		try{
-			selectOption(label,data);
+			selectoption(label,data);
 			
 		}
 		catch (Exception e)
@@ -595,7 +595,7 @@ public class AccountListPage extends SFPageBase {
 	public void setCustomerPriority(String label,String data) throws Exception {
 
 		try{
-			selectOption(label,data);
+			selectoption(label,data);
 			
 		}
 		catch (Exception e)
@@ -614,7 +614,7 @@ public class AccountListPage extends SFPageBase {
 	public void setSLA(String label,String data) throws Exception {
 
 		try{
-			selectOption(label,data);
+			selectoption(label,data);
 			
 		}
 		catch (Exception e)
@@ -694,7 +694,7 @@ public class AccountListPage extends SFPageBase {
 	public void setUpsellopportunity(String label,String data) throws Exception {
 
 		try{
-			selectOption(label,data);
+			selectoption(label,data);
 			
 		}
 		catch (Exception e)
@@ -713,7 +713,7 @@ public class AccountListPage extends SFPageBase {
 	public void setActive(String label,String data) throws Exception {
 
 		try{
-			selectOption(label,data);
+			selectoption(label,data);
 			
 		}
 		catch (Exception e)

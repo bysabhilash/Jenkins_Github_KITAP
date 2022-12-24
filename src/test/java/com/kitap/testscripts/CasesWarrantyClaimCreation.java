@@ -112,7 +112,7 @@ public class CasesWarrantyClaimCreation extends BaseTest {
         caseswarrantyclaimpage.clicksave("Save");
         caseswarrantyclaimpage.submitstatus();
         caseswarrantyclaimpage.savevalidation("Warranty Review","Warranty Review");
-        Sendmail.mail();
+       
       
 
     }

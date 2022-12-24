@@ -19,9 +19,10 @@ public class CasesWarrantyCreation extends BaseTest {
 
             throw new SkipException("Skipping the test " + "CasesWarrantyCreation".toUpperCase() + "as the Run mode is NO");
         }
+        ExtentManager.createTest("CasesWarrantyCreation","SalesforceDaikinDemo").assignAuthor("KT1461").assignCategory("Smoke").assignDevice("Chrome");
         ExtentManager.log("Starting CasesWarrantyCreation ...");
         lightningloginpage.openHomepage(SFBaseURL);
-        lightningloginpage.login(data.get("username"), data.get("password"));
+        lightningloginpage.login(SFUserId, SFPassword);
         caseswarrantypage.clicknew("New");
         caseswarrantypage.scrolling();
         caseswarrantypage.clickwarranty();

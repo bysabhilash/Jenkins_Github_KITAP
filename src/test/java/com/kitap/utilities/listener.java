@@ -1,5 +1,7 @@
 package com.kitap.utilities;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException; 
 
 import org.apache.commons.lang.exception.ExceptionUtils;
@@ -17,8 +19,13 @@ public class listener extends BaseTest implements ITestListener {
 	}
 
 	public synchronized void onStart(ITestContext context) {
-		ExtentManager.getReport();
-		ExtentManager.createTest(context.getName(), context.getName());
+		try {
+			ExtentManager.getReport();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//ExtentManager.createTest(context.getName(), context.getName());
 
 	}
 
@@ -30,7 +37,7 @@ public class listener extends BaseTest implements ITestListener {
 			ExtentManager.attachImage(); 
 			
 			JiraServiceProvider jiraSp = new JiraServiceProvider("https://team-16703161640122.atlassian.net",
-		            "alekhya.k@kairostech.com", "jfg2vr9aNmdBsKRnYLk55773", "RA");
+		            "alekhya.k@kairostech.com", "1Wp4dIOMtYAPShYWslDh4DC3", "RA");
 		      String issueSummary = result.getMethod().getConstructorOrMethod().getMethod().getName()
 		            + "got failed due to some assertion or exception";
 		      String issueDescription = result.getThrowable().getMessage() + "\n";
@@ -46,6 +53,7 @@ public class listener extends BaseTest implements ITestListener {
 
 	public synchronized void onFinish(ITestContext context) {
 		ExtentManager.flushReport();
+		
 	}
 
 }
